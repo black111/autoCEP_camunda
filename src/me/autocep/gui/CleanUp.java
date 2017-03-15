@@ -16,18 +16,19 @@ import me.autocep.esper.DispatchEvents;
  */
 public class CleanUp {
     
-    public static void eraseAllPanes(MainGUI main){
+    public static void eraseAllPanes(AutoCEP main){
         erasePane(main.getInfoPane());
         erasePane(main.getRulePane());
         erasePane(main.getFilePane());
         erasePane(main.getGlobalPane());
+        erasePane(main.getMonitoringPane());
     }
     
     public static void erasePane(JTextPane textPane){
         textPane.setDocument(new DefaultStyledDocument());
     }
     
-    public static void killEsperEngine(MainGUI main){
+    public static void killEsperEngine(AutoCEP main){
         File stopSignal = new File("stop");
         new DispatchEvents(new File[]{stopSignal}, main.getEsper()).start();
     }

@@ -8,7 +8,7 @@ import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.io.File;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import me.autocep.gui.MainGUI;
+import me.autocep.gui.AutoCEP;
 
 /**
  * Created by Raef M on 2/7/2017.
@@ -33,7 +33,7 @@ public class Global {
     
     
 
-    public static File[] selectFiles(MainGUI frame, String text, String filter) {
+    public static File[] selectFiles(AutoCEP frame, String text, String filter) {
         File[] files = null;
         JFileChooser fc = new JFileChooser();
         FileNameExtensionFilter csvFilter = new FileNameExtensionFilter(text, filter);
@@ -52,7 +52,7 @@ public class Global {
     }
 
     public static void drawLine(JTextPane infoPane, Color BLUE) {
-        writeLog(infoPane, BLUE, "******************************************");
+        writeLog(infoPane, BLUE, "********************************************************************************************");
     }
 
 }

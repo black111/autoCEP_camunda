@@ -9,7 +9,7 @@ package me.autocep.esper.models;
  *
  * @author Raef M
  */
-public class WaferEvent {
+public class WaferEvent extends Event{
     
     public int time;
     public double dim_11;
